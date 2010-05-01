@@ -30,7 +30,6 @@ int CFunctions::b( lua_State* luaVM ) \
 		if( lua_type ( luaVM, 1 ) == LUA_TSTRING || lua_type ( luaVM, 1 ) == LUA_TNUMBER ) \
 		{ \
 			unsigned char hval[ c ]; \
-			const char* data = lua_tostring( luaVM, 1 ); \
 			a( hval, (unsigned const char*) lua_tostring( luaVM, 1 ), lua_objlen( luaVM, 1 ) ); \
 			\
 			char pBuffer[ c*2+1 ]; \

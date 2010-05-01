@@ -4,13 +4,13 @@
 
 CC = gcc
 LD = gcc
-PROG = ml_base.so
+PROG = sha.so
 CXX = gcc
 CPP = gcc
 
 # Compiler flags
 # NOTE: add -g for debug, remove for release!
-CPPFLAGS = -g -MD -Wall -I./
+CPPFLAGS = -MD -Wall -I./
 LDFLAGS = -fPIC -shared -Wl,-soname,$(PROG).1,-R./
 LIBS = -lpthread -lstdc++ -L../../vendor/lua/src/.libs -llua
 
@@ -26,9 +26,9 @@ DEPS	= $(patsubst %.o,%.d,$(OBJS))
 
 #### Make rules
 
-all : ml_base
+all : sha
 
-ml_base : $(OBJS)
+sha : $(OBJS)
 	$(CC) $(CPPFLAGS) $(LDFLAGS) -o $(PROG) $(OBJS) $(LIBS)
 
 clean :
