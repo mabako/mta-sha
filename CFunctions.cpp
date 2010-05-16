@@ -49,9 +49,11 @@ int CFunctions::b( lua_State* luaVM ) \
 }
 
 fn(sha1,f_sha1,SHA1_DIGEST_SIZE);
+#ifdef WIN32
 fn(sha224,f_sha224,SHA224_DIGEST_SIZE);
 fn(sha256,f_sha256,SHA256_DIGEST_SIZE);
 fn(sha384,f_sha384,SHA384_DIGEST_SIZE);
 fn(sha512,f_sha512,SHA512_DIGEST_SIZE);
+#endif
 
 #undef fn

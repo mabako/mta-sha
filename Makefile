@@ -19,9 +19,11 @@ LIBS = -lpthread -lstdc++ -L../../vendor/lua/src/.libs -llua
 #### Source and object files
 
 SRC_LOCAL =		$(wildcard ./*.cpp ./extra/*.cpp)
+SRC_SHA   =		$(wildcard ./sha/sha1.c)
 OBJ_LOCAL =		$(patsubst %.cpp,%.o,$(SRC_LOCAL))
-OBJS	= $(OBJ_LOCAL)
-SRCS	= $(SRC_LOCAL)
+OBJ_SHA   =		$(patsubst %.c,%.o,$(SRC_SHA))
+OBJS	= $(OBJ_SHA) $(OBJ_LOCAL)
+SRCS	= $(SRC_SHA) $(SRC_LOCAL)
 DEPS	= $(patsubst %.o,%.d,$(OBJS))
 
 #### Make rules

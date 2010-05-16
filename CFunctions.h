@@ -32,10 +32,12 @@ class CFunctions
 public:
 #define fn(a) static int a ( lua_State* luaVM );
 fn(f_sha1);
+#ifdef WIN32
 fn(f_sha224);
 fn(f_sha256);
 fn(f_sha384);
 fn(f_sha512);
+#endif
 #undef fn
 };
 
