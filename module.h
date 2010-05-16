@@ -19,7 +19,7 @@
 /** MODULE SPECIFIC INFORMATION **/
 #define MODULE_NAME         "SHA Module"
 #define MODULE_AUTHOR       "mabako"
-#define MODULE_VERSION      1.01
+#define MODULE_VERSION      1.02f
 
 #include <string.h>
 #include "Common.h"
