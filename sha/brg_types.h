@@ -46,6 +46,9 @@
 extern "C" {
 #endif
 
+#ifndef __USE_ISOC99
+#  define __USE_ISOC99
+#endif
 #include <limits.h>
 
 #ifndef BRG_UI8

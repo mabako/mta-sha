@@ -35,9 +35,7 @@
 
 #include <stdlib.h>
 
-#ifdef WIN32
-#  define SHA_64BIT
-#endif
+#define SHA_64BIT
 
 /* define the hash functions that you need  */
 #define SHA_2   /* for dynamic hash length  */

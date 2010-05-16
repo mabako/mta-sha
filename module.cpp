@@ -42,10 +42,8 @@ MTAEXPORT void RegisterFunctions ( lua_State * luaVM )
 fn(sha1,f_sha1);
 fn(sha224,f_sha224);
 fn(sha256,f_sha256);
-#ifdef WIN32
 fn(sha384,f_sha384);
 fn(sha512,f_sha512);
-#endif
 #undef fn
     }
 }
